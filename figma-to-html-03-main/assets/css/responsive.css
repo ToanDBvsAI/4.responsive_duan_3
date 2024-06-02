@@ -1,0 +1,59 @@
+/* PC */
+@media (min-width: 992px) {
+}
+
+/* Tablet & mobile */
+@media (max-width: 991.98px) {
+  /* 1. an navbar tren tablet va mobile */
+  .navbar {
+    display: none;
+  }
+  /* 2. chuyen logo vao giua */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  /*3. can lai vi tri cua menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: #fff;
+    width: 24px;
+  }
+  /* 4. overplay */
+  .menu-overlay{
+    position: fixed;
+    background-color: blue;
+    inset: 0;
+    z-index: 1;
+    /* binh thuong an overlay di */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  /* 5. Kiem tra neu checkbox thi hien tai overlay */
+  .menu-checkbox:checked ~ .menu-overlay{
+    opacity:1;
+    visibility: visible;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98) {
+}
+
+/* Mobile */
+@media (min-width: 767.98px) {
+}
+/* tam an phan khong lien quan */
+.hero,
+.footer,
+main {
+    display: none;
+}
