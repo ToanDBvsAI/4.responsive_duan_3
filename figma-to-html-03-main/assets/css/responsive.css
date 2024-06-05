@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+  .mobile-header{
+    display: none;
+  }
 }
 
 /* Tablet & mobile */
@@ -29,7 +32,7 @@
   /* 4. overplay */
   .menu-overlay{
     position: fixed;
-    background-color: blue;
+    background-color:rgba(0,0,0,0.3);
     inset: 0;
     z-index: 1;
     /* binh thuong an overlay di */
@@ -41,6 +44,42 @@
   .menu-checkbox:checked ~ .menu-overlay{
     opacity:1;
     visibility: visible;
+  }
+  /* 6. code cho menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background-color:#2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+  }
+  /* 7. kiem tra neu checkbox duoc check hien menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* 8. menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__list{
+    margin-top: 35px;
+    font-display: column;
+  }
+  #navbar__list--mobile{
+    margin-top: 25px;
+  }
+  .navbar__link{
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover{
+    background-color: #00Ffff37;
   }
 }
 
